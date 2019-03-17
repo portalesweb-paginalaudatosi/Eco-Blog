@@ -8,6 +8,7 @@
     --verdeMentaClaro: #8ed9d2;
     --verdeSuperClaro: #b0e9d6;
     --verdeClaro: #98c987;
+    --amarillo: #ffbe00;
 }
 html {
     box-sizing: border-box;
@@ -36,24 +37,121 @@ p {
     color: var(--oscuro);  
 }
 .nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
-    grid-gap: .1%;
- 
-    
+    background-color: var(--oscuro);
+}
+.nav {
+    padding:  0 3% 0 0;
+    max-width: 1200;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+@media (min-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #ffffff;
+        flex-grow: inherit;
+    }
 }
 .nav a {
-    font-size: 1rem;
-    text-align: center;
+    font-size: 3rem;
     text-decoration: none;
     color: #ffffff;
     border-radius: 0.5rem;
-   
     padding: 10px 10px;
     background-color: var(--verdeMentaClaro);
+    margin-bottom: 0;
 }
-.logo {
-    background-color: #ffffff;
+.nav a:last-of-type {
+    margin-bottom: 0;
 }
+.logo{
+    padding: 10px 10px;
+    max-width: 100%;
+}
+@media (min-width: 768px) {
+    .nav a {
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+}
+.nav a:hover {
+    background-color: var(--amarillo);
+}
+/*----------------------------- Fin barra de navegación-----------------------------*/
 
 
+
+.diagonal {
+    background-color: var(--oscuro);
+    color: #ffffff;
+    height: 80px;
+    padding-top: 0px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.diagonal h2, blockquote {
+    font-size: 5%;
+    text-transform: uppercase;
+}
+.diagonal:before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 75px;
+    top: -50px;
+    left: 0;
+    background: var(--oscuro);
+    transform: skewY(10deg);
+}
+.diagonal:after {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 75px;
+    top: -50px;
+    right: 0;
+    background: var(--oscuro);
+    transform: skewY(-10deg);
+}
+@media( min-width:768px) {
+    .diagonal {
+        background-color: var(--oscuro);
+        color: #ffffff;
+        height: 250px;
+        padding-top: 0;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+    .diagonal:before {
+        position: absolute;
+        content: '';
+        width: 60%;
+        height: 125px;
+        top: -50px;
+        left: 0;
+        background: var(--oscuro);
+        transform: skewY(10deg);
+    }
+    .diagonal:after {
+        position: absolute;
+        content: '';
+        width: 60%;
+        height: 125px;
+        top: -50px;
+        right: 0;
+        background: var(--oscuro);
+        transform: skewY(-10deg);
+    }
+}
+.imagen {  
+    height: 100px;
+    position: relative;
+    width: 100%;
+    
+}
