@@ -35,11 +35,25 @@ p {
     /*font-family:*/
     color: var(--oscuro);  
 }
-
 .nav {
-    
     display: grid;
-    grid-template-columns: repeat(7, 2fr); 
-    justify-items: left;
-
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    grid-gap: .1%;
+ 
+    
 }
+.nav a {
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 0.5rem;
+   
+    padding: 10px 10px;
+    background-color: var(--verdeMentaClaro);
+}
+.logo {
+    background-color: #ffffff;
+}
+
+
