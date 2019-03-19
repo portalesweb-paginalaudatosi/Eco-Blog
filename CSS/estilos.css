@@ -17,6 +17,13 @@ html {
 }
 *, *:before, *:after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
 }
 body {
     font-size: 2rem;
@@ -36,122 +43,151 @@ p {
     /*font-family:*/
     color: var(--oscuro);  
 }
+/*------------------Barra de navegación--------------*/
 .nav {
     background-color: var(--oscuro);
 }
 .nav {
-    padding:  0 3% 0 0;
-    max-width: 1200;
+    padding:  0 10% 0 0;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-  
+    align-items: center  
 }
 @media (min-width: 768px) {
     .nav {
         flex-direction: row;
-        justify-content: space-between;
-        background-color: #ffffff;
+        justify-content: left;
+        background-color: var(--oscuro);
         flex-grow: inherit;
+        margin-top: -20px;
+        padding:  0 0 0 0;
+
     }
 }
 .nav a {
-    font-size: 3rem;
+    font-size: 1rem;
     text-decoration: none;
     color: #ffffff;
     border-radius: 0.5rem;
-    padding: 10px 10px;
-    background-color: var(--verdeMentaClaro);
-    margin-bottom: 0;
+    padding: 10px 5px;
+    background-color: var(--verdeMentaOscuro);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .nav a:last-of-type {
     margin-bottom: 0;
 }
 .logo{
-    padding: 10px 10px;
-    max-width: 100%;
+    margin-top: 2%;
+    margin-left: 1.5%;
 }
 @media (min-width: 768px) {
     .nav a {
         margin-bottom: 0;
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 }
 .nav a:hover {
     background-color: var(--amarillo);
 }
-/*----------------------------- Fin barra de navegación-----------------------------*/
-
-
-
-.diagonal {
-    background-color: var(--oscuro);
-    color: #ffffff;
-    height: 80px;
-    padding-top: 0px;
+/*------------------Foto de Portada------------------*/
+.hero {
+    height: 450px;
+    background-image: url(/img/bosqueMalo.jpg);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+/*Agrandar Portada*/
+.hero:hover {
+     
+    opacity: 0.8;
+    filter: alpha(opacity=50); 
+}
+.contenido-hero:hover{
+    color: var(--amarillo);
+}
+
+.contenido-hero {
+    position: relative;
+    z-index: -1;
+    flex: 1;
+    padding-bottom: 2rem;
+    color: var(--oscuro);
     text-align: center;
+    
+}   
+.contenido-hero:hover{
+    
+    color: var(--amarillo);
+}
+
+
+
+/*----------------------------- Diagonal -----------------------------*/
+.diagonal {
+    position: relative;
     width: 100%;
-}
-.diagonal h2, blockquote {
-    font-size: 5%;
-    text-transform: uppercase;
-}
-.diagonal:before {
-    position: absolute;
-    content: '';
-    width: 50%;
-    height: 75px;
-    top: -50px;
-    left: 0;
+    margin-top: -5%;
+    height: 300px;
     background: var(--oscuro);
-    transform: skewY(10deg);
+    box-sizing: border-box;
+    padding: 2px;
+    color: #ffffff;
+    margin-top: -30px;
+    margin-bottom: 100px;
+    
 }
 .diagonal:after {
     position: absolute;
-    content: '';
-    width: 50%;
-    height: 75px;
-    top: -50px;
-    right: 0;
-    background: var(--oscuro);
-    transform: skewY(-10deg);
-}
-@media( min-width:768px) {
-    .diagonal {
-        background-color: var(--oscuro);
-        color: #ffffff;
-        height: 250px;
-        padding-top: 0;
-        position: relative;
-        text-align: center;
-        width: 100%;
-    }
-    .diagonal:before {
-        position: absolute;
-        content: '';
-        width: 60%;
-        height: 125px;
-        top: -50px;
-        left: 0;
-        background: var(--oscuro);
-        transform: skewY(10deg);
-    }
-    .diagonal:after {
-        position: absolute;
-        content: '';
-        width: 60%;
-        height: 125px;
-        top: -50px;
-        right: 0;
-        background: var(--oscuro);
-        transform: skewY(-10deg);
-    }
-}
-.imagen {  
-    height: 100px;
-    position: relative;
     width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: skewY(4deg);
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*https://www.w3schools.com/css/css3_shadows.asp*/
+}
+   
+#citaPapa {
+    text-align: right;
+    padding: .8%;
+    font-size: 2rem;
+    color: #ffffff;
+}
+@media (min-width: 768px)  {
+    #citaPapa{
+        font-size: 3rem;
+    }
+}
+
+
+
+/*---------------Contenido-----------------*/
+.contenedor {
+    max-width: 1200px;
+    width: 80%;
+    margin:0 auto;
+}
+.TemasPlaneta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
     
 }
+
+@media (min-width: 768px) {
+    .TemasPlaneta {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
