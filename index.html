@@ -8,64 +8,70 @@
     <meta name="author" content="Jackeline Varela, Luis Inestroza, Norman Altamirano">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="/CSS/estilos.css">
-   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|Fjalla+One|Heebo|Passion+One" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eco-Blog</title>
 </head>
 <body>
     <header class="header">
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu"><img src="/img/menu.png" alt="menu"></label>
         <!--Menú de navegación y logo-->
-        <nav class="nav"> 
-            <div class="logo" >
-                <img src="/img/logo.png" alt="eco-blog" width="150" height="65" >
-            </div>
-            <div class="contenedor"> 
-                <a href="#">Inicio</a>
-            </div>
-            <div class="contenedor"> 
-                <a href="#">Categorías</a>
-            </div> 
-            <div class="contenedor"> 
-                <a href="#">Estadísticas</a>
-            </div>  
-            <div class="contenedor"> 
-                <a href="#">Ayuda Planeta</a>  
-            </div> 
-            <div class="contenedor"> 
-                <a href="#">Nosotros</a>
-            </div>
+        <nav class="menu"> 
+            <!--<div class="logo" >
+                <img src="/img/logo.png" alt="eco-blog"  >
+            </div> -->
+            <!--La barra de navegación funcionará mediante una lista desplegable-->
+            <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categorías</a></li>
+            <li><a href="#">Estadísticas</a></li>
+            <li><a href="#">Ayuda Planeta</a></li>
+            <li><a href="#">Nosotros</a></li>
+            </ul>
         </nav>
-        
-        <div class="hero">
-            <div class="contenido-hero">
-                <h1>¡ALERTA<br> PLANETA!</h1>
-            </div>
-        </div>    
-        <!--Portada-->
-        <div class="portada">
-            
-            <div class="diagonal" > 
-                <!--Diagonales para las portadas
-                Estas ffueron realizadas con código nuevo para nosotros
-                Puede ir a los link: https://www.youtube.com/watch?v=6QGOhCZLdhs&t=36s
-                https://www.youtube.com/watch?v=31rt2hI_7HU -->
-    
-                <!--
-                <h1  >¡Nuestro planeta agoniza! <br>
-                Debemos actuar rápido para <br>
-                protegerlo. </h1> -->
-
-                <blockquote id="citaPapa">
-                    <cite>"La humanidad tiene aún la capacidad  
-                            de colaborar para construir 
-                            NUESTRA CASA COMÚN "</cite>
-                    <footer>-Papa Francisco</footer>
-                </blockquote>
-            </div>   
-        </div>
-      
     </header>
+    <!--Portada-->
+    <div class="hero">
+        <div class="contenido-hero">
+            <h1>¡ALERTA<br> PLANETA!</h1>
+        </div>
+    </div>    
+        
+    <div class="portada">
+        <div class="diagonal" > 
+            <!--Diagonales para las portadas
+            Estas ffueron realizadas con código nuevo para nosotros
+            Puede ir a los link: https://www.youtube.com/watch?v=6QGOhCZLdhs&t=36s
+            https://www.youtube.com/watch?v=31rt2hI_7HU -->
+    
+            <!--
+            <h1  >¡Nuestro planeta agoniza! <br>
+            Debemos actuar rápido para <br>
+            protegerlo. </h1> -->
+
+            <blockquote id="citaPapa">
+                <cite>"La humanidad tiene aún la capacidad  
+                        de colaborar para construir 
+                        <b>nuestra casa común</b>"</cite>
+                <footer>-Papa Francisco</footer>
+            </blockquote>
+        </div>   
+        <div class="informacionGeneral" > 
+            <div class="contenedorInformacion" >
+                    <img src="/img/logo1.png" alt="logo" width="210px" height="350px" id="logo"> 
+                    <h1>"Laudato Si"</h1>
+                    <p> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ultricies mi at finibus. Maecenas tempor mollis
+                        mauris, vitae rutrum velit pretium non. Nullam in odio non leo tincidunt suscipit bibendum ac turpis. Vestibulum porta pharetra diam non congue.
+                        nec.
+                    </p>
+            </div>
+        </div>   
+    </div>
+
     <main>
         <!-- Contenedor grid -->
         <div class="TemasPlaneta contenedor">
@@ -73,27 +79,23 @@
             <div class="tema">
                 <img src="/img/calentamientoGlobal1.jpg" alt="Calentamiento Global" >
                 <p class="titulo">Suspendisse consectetur euismod posuere. </p>
-                <a href="#contacto" class="boton">Ver más</a>
+                <button class="boton" style="vertical-align:middle"><span> <a href="">Ver mas</a></span></button>
             </div>
                 
             <div class="tema">
                 <img src="/img/cambioClimatico.jpg" alt="producto">
                 <div class="contenidoTema">
                         <p class="titulo" class="w3-container w3-center w3-animate-right" >Suspendisse consectetur euismod posuere. </p>
-                    <a href="#contacto" class="boton">Ver más</a>
+                        <button class="boton" style="vertical-align:middle"><span> <a href="">Ver mas</a></span></button>
                 </div>
             </div>
             <div class="tema">
-                    <img src="/img/basura1.jpg" alt="producto">
+                    <img src="/img/basura1.jpg" alt="producto" style="width:100%">
                     <div class="contenidoTema">
                         <p class="titulo">Suspendisse consectetur euismod posuere. </p>
-                        <a href="#contacto" class="boton">Ver más</a>
+                        <button class="boton" style="vertical-align:middle"><span> <a href="">Ver mas</a></span></button>
                     </div>
                 </div>
-            <div class="tema">
-                <img src="/img/fabrica.jpg" alt="producto">
-                <p class="titulo"> Suspendisse semper massa turpis, in laoreet magna accumsan quis.  </p>
-                <a href="#contacto" class="boton">Ver más</a>
             </div>
 
         </div>
