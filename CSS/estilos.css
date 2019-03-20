@@ -32,9 +32,9 @@ body {
 img {
     max-width: 100%;
 }
-h1, h2 {
-    /*color: #ffffff;*/
-}
+/*h1, h2 {
+    color: #ffffff;
+}*/
 h3 {
     color: var(--azul);
 }
@@ -45,47 +45,43 @@ p {
 }
 /*------------------Barra de navegación--------------*/
 .nav {
-    background-color: var(--oscuro);
+    background-color: var(--verdeSuperClaro);
 }
 .nav {
-    padding:  0 10% 0 0;
-    max-width: 1600px;
+    padding: 1rem 0;
+    max-width: 1800px;
     margin: 0 auto;
     display: flex;
+
     flex-direction: column;
-    align-items: center  
+    align-items: center;
 }
 @media (min-width: 768px) {
     .nav {
         flex-direction: row;
-        justify-content: left;
-        background-color: var(--oscuro);
-        flex-grow: inherit;
-        margin-top: -20px;
-        padding:  0 0 0 0;
-
+        justify-content: right;
     }
 }
 .nav a {
     font-size: 1rem;
     text-decoration: none;
-    color: #ffffff;
-    border-radius: 0.5rem;
+    color: var(--oscuro);
     padding: 10px 5px;
-    background-color: var(--verdeMentaOscuro);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 2rem;
+    align-items: center;
+    /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
 }
 .nav a:last-of-type {
     margin-bottom: 0;
 }
-.logo{
+/*.logo{
     margin-top: 2%;
     margin-left: 1.5%;
-}
+}*/
 @media (min-width: 768px) {
     .nav a {
         margin-bottom: 0;
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
 }
 .nav a:hover {
@@ -102,29 +98,21 @@ p {
 }
 /*Agrandar Portada*/
 .hero:hover {
-     
     opacity: 0.8;
-    filter: alpha(opacity=50); 
+    filter: alpha(opacity=80); 
 }
-.contenido-hero:hover{
-    color: var(--amarillo);
-}
-
 .contenido-hero {
     position: relative;
-    z-index: -1;
+    z-index: 2;
     flex: 1;
     padding-bottom: 2rem;
     color: var(--oscuro);
-    text-align: center;
-    
+    text-align: right; 
+    margin-right: 10%; 
 }   
-.contenido-hero:hover{
-    
+.contenido-hero:hover {
     color: var(--amarillo);
 }
-
-
 
 /*----------------------------- Diagonal -----------------------------*/
 .diagonal {
@@ -132,12 +120,12 @@ p {
     width: 100%;
     margin-top: -5%;
     height: 300px;
-    background: var(--oscuro);
+    background: var(--verdeMentaOscuro);
     box-sizing: border-box;
     padding: 2px;
     color: #ffffff;
     margin-top: -30px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     
 }
 .diagonal:after {
@@ -169,8 +157,6 @@ p {
     }
 }
 
-
-
 /*---------------Contenido-----------------*/
 .contenedor {
     max-width: 1200px;
@@ -181,7 +167,6 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
-    
 }
 
 @media (min-width: 768px) {
