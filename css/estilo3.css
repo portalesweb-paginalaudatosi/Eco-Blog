@@ -1,5 +1,13 @@
-:root {
-    /* Colores */
+:root { 
+    --blanco: #ffffff;
+    --primario: #01ab91;
+    --secundario: #2c4d54;
+    --letra: #127e6e;
+    --cuadro: #8ed9d2;
+    --hover: #fece42;
+    --gris: #808080;
+
+     /* Colores */
     --oscuro: #2c4d54;
     --azul: #008bbe;
     --azulClaro: #b5dce1;
@@ -9,6 +17,9 @@
     --verdeSuperClaro: #b0e9d6;
     --verdeClaro: #98c987;
     --amarillo: #ffbe00;
+}
+.header{
+    margin-bottom: 10px;
 }
 html {
     box-sizing: border-box;
@@ -101,7 +112,6 @@ img {
     background-image: url(/img/portadaPaisaje.jpg);
     position: relative;
     display: flex;
-    order: 2;
     align-items: right;
     justify-content: right;    
 }
@@ -172,96 +182,71 @@ img {
         font-size: 3rem;
     }
 }
-/*---------------Contenido-----------------*/
 
-.informacionGeneral {
+/*Contenido*/
+.contenedor {
+    font-size: 1.3rem;
     max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    line-height: 2;
+}
+.contenedor-informacion {
+    align-items: center;
+}
+.contenedor-informacion img {
+    height: 300px;
+    border: solid 10px;
+}
+@media (min-width: 768px) {
+    .contenedor-informacion {
+        display: grid;
+        grid-template-columns: auto auto;
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-column-gap: 2rem;
+    }
+}
+.contenedor2 {
+    max-width: 1200px;
+    font-size: 1.3rem;
     margin: 0 auto;
     padding: 3.2rem;
-    background-color: var(--verdeSuperClaro);
-    color: var(--oscuro);
-    border: solid 5px var(--verdeOscuro);
+    background-color: var(--cuadro);
+    margin-bottom: 2rem;
+    color: var(--letra);
+    border: solid 5px var(--letra);
     text-align: justify;
+    box-shadow: 5px 5px 10px var(--gris);
 }
-.informacionGeneral {
-    box-shadow: 5px 5px 10px grey;
-  }
-.contenedorInformacion img {
-    float:left;
-    margin:10px;
-    margin-bottom: 10%;
+.contenedor-informacion2 {
+    align-items: center;
 }
-.contenedorInformacion h1 {
-    text-align: center;
-    font-size: 30px;;
+.contenedor2 .texto p {
+    color: var(--letra);
 }
+.contenedor-informacion2 img {
+    height: 300px;
+    width: 480px;
+}
+@media (min-width: 768px) {
+    .contenedor-informacion2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-column-gap: 2rem;
+    }
+}
+.centrar {
+    margin: 0 10%;
+}
+@media (min-width: 768px) {
+    .centrar {
+        margin: 0;
+    }
+}
+/*Footer*/
 
-.contenedor {
-    max-width: 1200px;
-    width: 80%;
-    margin:0 auto;
-}
-.TemasPlaneta {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-}
-.contenedorInformacion h1 {
-    font-size: 1.3rem;
-    text-align: center;
-}
-.contenedorInformacion p {
-    font-size: 1rem;
-    text-align: center;
-}
-.contenedorInformacion img {
-    width: 100%;
-    height: auto;
-}
-@media (min-width: 768px) {
-    .TemasPlaneta {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media (min-width: 768px) {
-    .contenedorInformacion img {
-        width: 250px; 
-        height:250px;
-        float:left;
-        margin-top:-5.3%;
-    }
-}
-.tema {
-    font-family: 'Heebo', sans-serif;
-    font-size: 10px;
-    text-align: center;
-    padding: 5%;
-    color: var(--oscuro);
-    width: 90%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 25px;
-}
-.titulo{
-    font-size: 1rem;
-}
-@media (min-width:768px) {
-    .tema {
-        font-family: 'Heebo', sans-serif;
-        font-size: 20px;
-        text-align: center;
-        padding: 5%;
-        color: var(--oscuro);
-        width: 80%;
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-bottom: 25px;
-    }
-    .tema:hover {
-        width: 300px;
-    }
-    
-}
 @media (min-width:768px) {
     .boton {
         /*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/

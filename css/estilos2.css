@@ -1,5 +1,14 @@
-:root {
+:root
+{
+
     /* Colores */
+    --blanco: #FFFFFF;
+    --amarillo: #FECE42;
+    /* Botones */
+    --azul: #01AB91;
+    /* Parrafos */
+    --azuloscuro: #2C4D54;
+       /* Colores */
     --oscuro: #2c4d54;
     --azul: #008bbe;
     --azulClaro: #b5dce1;
@@ -10,28 +19,37 @@
     --verdeClaro: #98c987;
     --amarillo: #ffbe00;
 }
-html {
-    box-sizing: border-box;
-    /*Tamaño de la fuente*/
 
+html
+{
+    box-sizing: border-box;
+    height: 100%;
 }
-*, *:before, *:after {
+
+*,*:before, *:after
+{
     box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-.clearfix::after {
-    content: '';
-    clear: both;
-    display: block;
+
 }
 body {
     font-size: 2rem;
     line-height: 2;
     font-family: 'Roboto Slab', serif;
 }
-img {
+img 
+{
     max-width: 100%;
+}
+
+form 
+{
+    padding: 1rem;
+
+}
+
+form legend 
+{
+    font-size: 2rem;
 }
 
 /*------------------Barra de navegación--------------*/
@@ -98,10 +116,9 @@ img {
 /*------------------Foto de Portada------------------*/
 .hero {
     height: 450px;
-    background-image: url(/img/portadaPaisaje.jpg);
+    background-image: url(/img/bosqueMalo.jpg);
     position: relative;
     display: flex;
-    order: 2;
     align-items: right;
     justify-content: right;    
 }
@@ -172,108 +189,167 @@ img {
         font-size: 3rem;
     }
 }
-/*---------------Contenido-----------------*/
+/* ESTADISTICAS */
 
-.informacionGeneral {
+.contenedor 
+{
     max-width: 1200px;
+    width: 95%;
     margin: 0 auto;
-    padding: 3.2rem;
-    background-color: var(--verdeSuperClaro);
-    color: var(--oscuro);
-    border: solid 5px var(--verdeOscuro);
-    text-align: justify;
-}
-.informacionGeneral {
-    box-shadow: 5px 5px 10px grey;
-  }
-.contenedorInformacion img {
-    float:left;
-    margin:10px;
-    margin-bottom: 10%;
-}
-.contenedorInformacion h1 {
-    text-align: center;
-    font-size: 30px;;
 }
 
-.contenedor {
-    max-width: 1200px;
-    width: 80%;
-    margin:0 auto;
-}
-.TemasPlaneta {
+.lista-estadisticas
+{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
 }
-.contenedorInformacion h1 {
-    font-size: 1.3rem;
-    text-align: center;
-}
-.contenedorInformacion p {
-    font-size: 1rem;
-    text-align: center;
-}
-.contenedorInformacion img {
-    width: 100%;
-    height: auto;
-}
-@media (min-width: 768px) {
-    .TemasPlaneta {
+@media (min-width: 768px) 
+{
+    .lista-estadisticas {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-@media (min-width: 768px) {
-    .contenedorInformacion img {
-        width: 250px; 
-        height:250px;
-        float:left;
-        margin-top:-5.3%;
-    }
+
+.estadistica img
+{
+    max-width: 100%;
+    align-items: center;
 }
-.tema {
-    font-family: 'Heebo', sans-serif;
-    font-size: 10px;
-    text-align: center;
-    padding: 5%;
-    color: var(--oscuro);
-    width: 90%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 25px;
+
+.estadistica 
+{
+
+    background-color: var(--azuloscuro);
+    padding: 1rem;
 }
-.titulo{
+
+
+.texto p 
+{
+    color: var(--blanco);
     font-size: 1rem;
+    text-align: justify;
+    line-height: 1.2;
+    margin: 1rem 0;
 }
-@media (min-width:768px) {
-    .tema {
-        font-family: 'Heebo', sans-serif;
-        font-size: 20px;
-        text-align: center;
-        padding: 5%;
-        color: var(--oscuro);
-        width: 80%;
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-bottom: 25px;
+
+.texto .contenido
+{
+    font-size: 2rem;
+}
+
+
+
+/* FORMULARIO */
+.campaña 
+{
+
+   margin-top: 1%;
+   background-color: rgb(165, 220, 230);
+}
+
+.campaña h2
+{
+    text-align: center;
+    padding: 20, 0px;
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) 
+{
+    form 
+    {
+        max-width: 800px;
+        margin: 0 auto;
     }
-    .tema:hover {
-        width: 300px;
+    .contenedor-campos 
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
+    .campo 
+    {
+        flex: 0 0 calc(50% - 1rem); /*amplitud de los label*/
+    }
+}
+.campo 
+{
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.campo label 
+{
     
+    font-size: 30px;
+    position: relative; right:  230px;
 }
+
+.campo input[type="text"],
+.campo input[type="mail"],
+.campo textarea
+{
+    
+    flex: 1; /*tamaño de los label*/
+    height: 2rem;
+    position: relative; right: 220px;
+}
+
+.width100
+{
+    flex: 0 0 100%;
+}
+
+.enviar 
+{
+    display: flex;
+}
+
+
+/*  Botones  */
+
+.botones nav a
+{
+    
+    text-decoration: none;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    background: var(--azul);
+    color: var(--blanco);
+   
+}
+
+@media (min-width: 768px) 
+{
+    .botones nav 
+    {
+        padding: 20px;
+        flex-direction: column;
+    }
+}
+
+.botones nav 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
 @media (min-width:768px) {
     .boton {
         /*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
-        padding: .5rem 2rem;
+        padding: .3rem 1rem;
         border-radius: 0.3rem;
         display: inline-block;
         color: var(--azul);
         background-color: var(--verdeClaro);
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 1.1rem;
-        font-weight: 10;
+        font-size: 1.2rem;
+        font-weight: 700;
         border: none;
         width: 200px;
         transition: all 0.5s;
@@ -304,9 +380,6 @@ img {
         opacity: 1;
         right: 0;
       }
-      .boton a {
-        font-family: 'Roboto Slab', serif;
-      }
       .boton span a {
         text-decoration: none;
       }
@@ -316,8 +389,8 @@ img {
     padding: 3px;
     border-radius: 0.3rem;
     display: inline-block;
-    color: #ffffff;
-    background-color: var(--oscuro);
+    color: var(--azul);
+    background-color: var(--verdeClaro);
     text-decoration: none;
     text-transform: uppercase;
     font-size: .8rem;
@@ -327,9 +400,6 @@ img {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-}
-.boton a {
-    color: #ffffff;
 }
 .boton span {
     cursor: pointer;
@@ -359,79 +429,5 @@ img {
     text-decoration: none;
   }
 
-/*Footer*/
-.contenedor3 { 
-    
-    align-items: center;
-}
-.contenedor3 p {
-    font-size: 1rem;
-    text-align: center;
-}
-.contenedor3 a {
-    text-decoration: none;
-}
-.boton {
-    
-    margin-top: 5px;
-}
 
-@media (min-width:768px) {
-    .contenedor3 {
-        padding-left: 0;
-        align-items: center;
-        align-content: center;
-    }
-    .contenedor3 p {
-        font-size: 1rem;
-        text-align: center;
-    }
-    .contenedor3 a {
-        text-decoration: none;
-    }
-    .boton {
-        margin-top: 5px;
-    }
-}
-.footer-sitio {
-    background-color: var(--verdeMentaClaro);
-    padding-top: 10%;
-    margin-top: 5%;
-    text-align: center;
-}
-.footer-sitio a i {
-    color: var(--oscuro) ;
-    text-decoration: none;
-    font-size: 2rem;
-    margin-right: 20px;
-}
-.footer-sitio a:last-of-type {
-    margin-right: 0px;
-}
-.redes{
-    margin-top: 10px;
-    padding-bottom: 10px;
-}
-.redes a i:hover{
-    color:#ffffff;
-}
-.copyright {
-    background-color: var(--verdeMentaOscuro);
-    font-size: 1rem;
-    color: var(--oscuro);
-}
-
-@media (min-width:768px)  {
-    .footer-sitio {
-        background-color: var(--verdeMentaClaro);
-        padding-top: 10px;
-        margin-top: 5%;
-        text-align: center;
-    }
-    .copyright {
-        background-color: var(--verdeMentaOscuro);
-        padding: 20px 0;
-        margin-bottom: 0;
-        margin-top: 0;
-        }
-}
+/* FOOTER */
