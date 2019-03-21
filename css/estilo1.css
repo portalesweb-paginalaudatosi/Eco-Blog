@@ -98,11 +98,15 @@ img {
 /*------------------Foto de Portada------------------*/
 .hero {
     height: 450px;
-    background-image: url(/img/bosqueMalo.jpg);
+    background-image: url(/img/portadaPaisaje.jpg);
     position: relative;
     display: flex;
     align-items: right;
     justify-content: right;    
+}
+.hero img {
+    width: 100%;
+    height: auto;
 }
 /*Agrandar Portada*/
 .hero:hover {
@@ -178,6 +182,9 @@ img {
     border: solid 5px var(--verdeOscuro);
     text-align: justify;
 }
+.informacionGeneral {
+    box-shadow: 5px 5px 10px grey;
+  }
 .contenedorInformacion img {
     float:left;
     margin:10px;
@@ -210,7 +217,6 @@ img {
     width: 100%;
     height: auto;
 }
-
 @media (min-width: 768px) {
     .TemasPlaneta {
         grid-template-columns: repeat(3, 1fr);
@@ -222,7 +228,6 @@ img {
         height:250px;
         float:left;
         margin-top:-5.3%;
-        
     }
 }
 .tema {
@@ -250,6 +255,9 @@ img {
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin-bottom: 25px;
+    }
+    .tema:hover {
+        width: 300px;
     }
     
 }
