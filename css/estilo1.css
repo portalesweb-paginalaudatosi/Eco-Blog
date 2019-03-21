@@ -88,7 +88,7 @@ img {
         flex-direction: column;
     }
     .menu li a {
-        color: var(--oscuro);
+        color: var(--amarillo);
     }
     #btn-menu:checked ~ .menu {
         margin: 0;
@@ -101,7 +101,7 @@ img {
     background-image: url(/img/portadaPaisaje.jpg);
     position: relative;
     display: flex;
-    order: 2;
+
     align-items: right;
     justify-content: right;    
 }

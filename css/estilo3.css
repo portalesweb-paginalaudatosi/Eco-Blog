@@ -99,7 +99,7 @@ img {
         flex-direction: column;
     }
     .menu li a {
-        color: var(--oscuro);
+        color: var(--amarillo);
     }
     #btn-menu:checked ~ .menu {
         margin: 0;
