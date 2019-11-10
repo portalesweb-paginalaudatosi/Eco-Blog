@@ -27,13 +27,20 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css?family=Francois+One|Lora:700i|Oswald|Roboto+Slab" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Francois+One|Lora:700i|Oswald|Roboto+Slab"
+      rel="stylesheet"
+    />
     <title>Eco-Blog</title>
   </head>
   <body>
     <header class="header">
       <input type="checkbox" id="btn-menu" />
-      <label for="btn-menu"><img src="/img/menu.png" alt="menu"/></label>
+      <label for="btn-menu">
+        <i class="fas fa-bars"></i>
+
+        <!-- <img src="/img/menu.png" alt="menu"/> -->
+      </label>
       <!--Menú de navegación y logo-->
       <nav class="menu">
         <!--La barra de navegación funcionará mediante una lista desplegable-->
@@ -46,14 +53,14 @@
       <!-- Slider que mostrará las mejores fotos-->
       <div id="slider">
         <figure>
-            <img src="/img/slider/Slider01.jpg" alt="Slider">
-            <img src="/img/slider/Slider02.jpg" alt="Slider">
-            <img src="/img/slider/Slider03.jpg" alt="Slider">
-            <img src="/img/slider/Slider04.jpg" alt="Slider">
-            <img src="/img/slider/Slider05.jpg" alt="Slider">
-            <img src="/img/slider/Slider06.jpg" alt="Slider">
+          <img src="/img/slider/Slider01.jpg" alt="Slider" />
+          <img src="/img/slider/Slider02.jpg" alt="Slider" />
+          <img src="/img/slider/Slider03.jpg" alt="Slider" />
+          <img src="/img/slider/Slider04.jpg" alt="Slider" />
+          <img src="/img/slider/Slider05.jpg" alt="Slider" />
+          <img src="/img/slider/Slider06.jpg" alt="Slider" />
         </figure>
-    </div>
+      </div>
     </header>
     <!--Portada-->
 
@@ -67,17 +74,15 @@
         <blockquote id="citaPapa">
           <cite
             >"La humanidad tiene aún la capacidad de colaborar para construir
-            <b>nuestra casa común</b>"</cite>
+            <b>nuestra casa común</b>"</cite
+          >
           <footer>-Papa Francisco</footer>
         </blockquote>
       </div>
 
       <div class="informacionGeneral">
         <div class="contenedorInformacion">
-          <img
-            src="/img/logo.png"
-            alt="logo"
-            id="logo"/>
+          <img src="/img/logo.png" alt="logo" id="logo" />
           <h1>"Laudato Si"</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis
@@ -123,17 +128,20 @@
         </div>
       </div>
     </main>
-    
+
     <!-- Footer -->
-    
+
     <footer class="footer-sitio">
       <div class="contenedor3">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed . Minteger non pharetra mauris, vel ultrices ipsum.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed .
+          Minteger non pharetra mauris, vel ultrices ipsum.
+        </p>
         <button class="boton" style="vertical-align:middle">
-            <span> <a href="">Leer Encíclica</a></span>
-          </button>
+          <span> <a href="">Leer Encíclica</a></span>
+        </button>
       </div>
-      
+
       <section class="redes">
         <nav>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -146,14 +154,13 @@
       </p>
     </footer>
 
-     <!--Scripts que se van a  ejecutar-->
-     <script
-     src="https://code.jquery.com/jquery-3.4.0.min.js"
-     integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-     crossorigin="anonymous"></script>
- 
-     <script src="/scripts/menu.js"></script>
+    <!--Scripts que se van a  ejecutar-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"
+    ></script>
 
+    <script src="/scripts/menu.js"></script>
   </body>
-
 </html>

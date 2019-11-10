@@ -1,473 +1,475 @@
 :root {
-    /* Colores */
-    --principal: #009DC8;
-    --secundario: #ffbe00; 
-    --secundario2: #DB5000;
-    --secundario3: #CDF1FB;
-    --oscuro: #2c4d54;
-    
+  /* Colores */
+  --principal: #009dc8;
+  --secundario: #ffbe00;
+  --secundario2: #db5000;
+  --secundario3: #cdf1fb;
+  --oscuro: #2c4d54;
 }
 html {
-    box-sizing: border-box;
-    /*Tamaño de la fuente*/
-
+  box-sizing: border-box;
+  /*Tamaño de la fuente*/
 }
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 .clearfix::after {
-    content: '';
-    clear: both;
-    display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
 body {
-    font-size: 2rem;
-    line-height: 2;
-    font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+  line-height: 2;
+  font-family: "Roboto Slab", serif;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /*------------------Barra de navegación--------------*/
 
 .header {
-    background-color: var(--principal);
+  background-color: var(--principal);
 }
 #btn-menu {
-    display: none;
+  display: none;
 }
 .header label {
-    display: none;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    border-right: 1px solid #ffffff;
+  display: none;
+  width: 50px;
+  height: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 60px;
+  border-right: 1px solid #ffffff;
 }
 .header label:hover {
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
 }
 .menu ul {
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 .menu li a {
-    font-family: 'Francois One', sans-serif;
-    display: block;
-    padding: 10px 20px;
-    color: #ffffff;
-    text-decoration: none;
+  font-family: "Francois One", sans-serif;
+  display: block;
+  padding: 10px 20px;
+  color: #ffffff;
+  text-decoration: none;
 }
 .menu li a:hover {
-    background: rgba(152, 201, 135, 0.5);
+  background: rgba(152, 201, 135, 0.5);
 }
 /*En este caso se manejó el media query para el maximo en pantallas pequeñas*/
-@media (max-width:768px) {
-    .header label {
-        display: block;
-    }
-    .menu {
-        position: absolute;
-        background: (var(--principal));
-        width:100%;
-        margin-left: -70%;
-      
-        transition: all 0.5s;
-        z-index: 1;
-    }
-    .menu ul {
-        flex-direction: column;
-    }
-    .menu li a {
-        color: var(--secundario);
-    }
-    #btn-menu:checked ~ .menu {
-        margin: 0;
-    }
+@media (max-width: 768px) {
+  .header label {
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    background: (var(--principal));
+    width: 100%;
+    margin-left: -70%;
+
+    transition: all 0.5s;
+    z-index: 1;
+  }
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu li a {
+    color: var(--secundario);
+  }
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+  }
+  .fas {
+    color: #ffffff;
+    font-size: 1.1em;
+  }
 }
 
 /*------------------Foto de Portada------------------*/
 .hero {
-    height: 450px;
-    background-image: url(/img/portadaPaisaje.jpg);
-    position: relative;
-    display: flex;
+  height: 450px;
+  background-image: url(/img/portadaPaisaje.jpg);
+  position: relative;
+  display: flex;
 
-    align-items: right;
-    justify-content: right;    
+  align-items: right;
+  justify-content: right;
 }
 .hero img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 /*Agrandar Portada*/
 .hero:hover {
-    opacity: 0.8;
-    filter: alpha(opacity=80); 
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
 .contenido-hero {
-    position: absolute;
-    z-index: -2;
-    flex: -1;
-    padding-bottom: 2rem;
-    color: var(--principal);
-    text-align: right; 
-    margin-right: 0; 
-}   
+  position: absolute;
+  z-index: -2;
+  flex: -1;
+  padding-bottom: 2rem;
+  color: var(--principal);
+  text-align: right;
+  margin-right: 0;
+}
 .contenido-hero:hover {
-    color: var(--secundario);
+  color: var(--secundario);
 }
 
 /*----------------------------- Diagonal -----------------------------*/
 .diagonal {
-    position: relative;
-    width: 100%;
-    margin-top: -5%;
-    height: 300px;
-    background: var(--principal);
-    box-sizing: border-box;
-    padding: 2px;
-    color: #ffffff;
-    margin-top: -30px;
-    margin-bottom: 200px;
-    
+  position: relative;
+  width: 100%;
+  margin-top: -5%;
+  height: 300px;
+  background: var(--principal);
+  box-sizing: border-box;
+  padding: 2px;
+  color: #ffffff;
+  margin-top: -30px;
+  margin-bottom: 200px;
 }
 .diagonal:after {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background: inherit;
-    z-index: -3;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform-origin: top left;
-    transform: skewY(4deg);
-    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /*https://www.w3schools.com/css/css3_shadows.asp*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: inherit;
+  z-index: -3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(4deg);
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /*https://www.w3schools.com/css/css3_shadows.asp*/
 }
 #citaPapa {
-    font-family: 'Lora', serif;
-    text-align: right;
-    padding: .8%;
-    font-size: 2rem;
-    color: #ffffff;
+  font-family: "Lora", serif;
+  text-align: right;
+  padding: 0.8%;
+  font-size: 2rem;
+  color: #ffffff;
 }
 #citaPapa b {
-    color: var(--secundario);
+  color: var(--secundario);
 }
-@media (min-width: 768px)  {
-    #citaPapa{
-        font-size: 3rem;
-    }
+@media (min-width: 768px) {
+  #citaPapa {
+    font-size: 3rem;
+  }
 }
 /*---------------Contenido-----------------*/
 
 .informacionGeneral {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3.2rem;
-    background-color: var(--secundario3);
-    color: var(--oscuro);
-    border: solid 5px var(--secundario2);
-    text-align: justify;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.2rem;
+  background-color: var(--secundario3);
+  color: var(--oscuro);
+  border: solid 5px var(--secundario2);
+  text-align: justify;
 }
 .informacionGeneral {
-    box-shadow: 5px 5px 10px grey;
-  }
+  box-shadow: 5px 5px 10px grey;
+}
 .contenedorInformacion img {
-    float:left;
-    margin:10px;
-    margin-bottom: 10%;
+  float: left;
+  margin: 10px;
+  margin-bottom: 10%;
 }
 .contenedorInformacion h1 {
-    text-align: center;
-    font-size: 30px;;
+  text-align: center;
+  font-size: 30px;
 }
 
 .contenedor {
-    max-width: 1200px;
-    width: 80%;
-    margin:0 auto;
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
 }
 .TemasPlaneta {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
 }
 .contenedorInformacion h1 {
-    font-size: 1.3rem;
-    text-align: center;
+  font-size: 1.3rem;
+  text-align: center;
 }
 .contenedorInformacion p {
-    font-size: 1rem;
-    text-align: center;
+  font-size: 1rem;
+  text-align: center;
 }
 .contenedorInformacion img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 @media (min-width: 768px) {
-    .TemasPlaneta {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .TemasPlaneta {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media (min-width: 768px) {
-    .contenedorInformacion img {
-        width: 250px; 
-        height:250px;
-        float:left;
-        margin-top:-5.3%;
-    }
+  .contenedorInformacion img {
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin-top: -5.3%;
+  }
 }
 .tema {
-    font-family: 'Heebo', sans-serif;
-    font-size: 10px;
+  font-family: "Heebo", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  padding: 5%;
+  color: var(--oscuro);
+  width: 90%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 25px;
+}
+.titulo {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .tema {
+    font-family: "Heebo", sans-serif;
+    font-size: 20px;
     text-align: center;
     padding: 5%;
     color: var(--oscuro);
-    width: 90%;
+    width: 80%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .tema:hover {
+    width: 300px;
+  }
 }
-.titulo{
-    font-size: 1rem;
-}
-@media (min-width:768px) {
-    .tema {
-        font-family: 'Heebo', sans-serif;
-        font-size: 20px;
-        text-align: center;
-        padding: 5%;
-        color: var(--oscuro);
-        width: 80%;
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-bottom: 25px;
-    }
-    .tema:hover {
-        width: 300px;
-    }
-    
-}
-@media (min-width:768px) {
-    .boton {
-        /*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
-        padding: .5rem 2rem;
-        border-radius: 0.3rem;
-        display: inline-block;
-        color: var(--secundario1);
-        background-color: var(--secundario2);
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 1.1rem;
-        font-weight: 10;
-        border: none;
-        width: 200px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 5px;
-    }
-    .boton span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-      }
-      
-      .boton span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -20px;
-        transition: 0.5s;
-      }
-      
-      .boton:hover span {
-        padding-right: 25px;
-      }
-      
-      .boton:hover span:after {
-        opacity: 1;
-        right: 0;
-      }
-      .boton a {
-        font-family: 'Roboto Slab', serif;
-      }
-      .boton span a {
-        text-decoration: none;
-      }
-}
-.boton {
+@media (min-width: 768px) {
+  .boton {
     /*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
-    padding: 3px;
+    padding: 0.5rem 2rem;
     border-radius: 0.3rem;
     display: inline-block;
-    color: #ffffff;
-    background-color: var(--secundario);
+    color: var(--secundario1);
+    background-color: var(--secundario2);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: .8rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 10;
     border: none;
-    width: 100px;
+    width: 200px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-}
-.boton a {
-    color: #ffffff;
-}
-.boton span {
+  }
+  .boton span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
-  
+
   .boton span:after {
-    content: '\00bb';
+    content: "\00bb";
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
   }
-  
+
   .boton:hover span {
     padding-right: 25px;
   }
-  
+
   .boton:hover span:after {
     opacity: 1;
     right: 0;
   }
+  .boton a {
+    font-family: "Roboto Slab", serif;
+  }
   .boton span a {
     text-decoration: none;
   }
-
-/*Footer*/
-.contenedor3 { 
-    
-    align-items: center;
-}
-.contenedor3 p {
-    font-size: 1rem;
-    text-align: center;
-}
-.contenedor3 a {
-    text-decoration: none;
 }
 .boton {
-    
-    margin-top: 5px;
+  /*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
+  padding: 3px;
+  border-radius: 0.3rem;
+  display: inline-block;
+  color: #ffffff;
+  background-color: var(--secundario);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: none;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.boton a {
+  color: #ffffff;
+}
+.boton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-@media (min-width:768px) {
-    .contenedor3 {
-        padding-left: 0;
-        align-items: center;
-        align-content: center;
-    }
-    .contenedor3 p {
-        font-size: 1rem;
-        text-align: center;
-    }
-    .contenedor3 a {
-        text-decoration: none;
-    }
-    .boton {
-        margin-top: 5px;
-    }
+.boton span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.boton:hover span {
+  padding-right: 25px;
+}
+
+.boton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.boton span a {
+  text-decoration: none;
+}
+
+/*Footer*/
+.contenedor3 {
+  align-items: center;
+}
+.contenedor3 p {
+  font-size: 1rem;
+  text-align: center;
+}
+.contenedor3 a {
+  text-decoration: none;
+}
+.boton {
+  margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+  .contenedor3 {
+    padding-left: 0;
+    align-items: center;
+    align-content: center;
+  }
+  .contenedor3 p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .contenedor3 a {
+    text-decoration: none;
+  }
+  .boton {
+    margin-top: 5px;
+  }
 }
 .footer-sitio {
-    background-color: var(--secundario3);
-    padding-top: 10%;
-    margin-top: 5%;
-    text-align: center;
+  background-color: var(--secundario3);
+  padding-top: 10%;
+  margin-top: 5%;
+  text-align: center;
 }
 .footer-sitio a i {
-    color: var(--oscuro) ;
-    text-decoration: none;
-    font-size: 2rem;
-    margin-right: 20px;
+  color: var(--oscuro);
+  text-decoration: none;
+  font-size: 2rem;
+  margin-right: 20px;
 }
 .footer-sitio a:last-of-type {
-    margin-right: 0px;
+  margin-right: 0px;
 }
-.redes{
-    margin-top: 10px;
-    padding-bottom: 10px;
+.redes {
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
-.redes a i:hover{
-    color:#ffffff;
+.redes a i:hover {
+  color: #ffffff;
 }
 .copyright {
-    background-color: var(--principal);
-    font-size: 1rem;
-    color: var(--oscuro);
+  background-color: var(--principal);
+  font-size: 1rem;
+  color: var(--oscuro);
 }
 
-@media (min-width:768px)  {
-    .footer-sitio {
-        background-color: var(--secundario3);
-        padding-top: 10px;
-        margin-top: 5%;
-        text-align: center;
-    }
-    .copyright {
-        background-color: var(--principal);
-        padding: 20px 0;
-        margin-bottom: 0;
-        margin-top: 0;
-        }
+@media (min-width: 768px) {
+  .footer-sitio {
+    background-color: var(--secundario3);
+    padding-top: 10px;
+    margin-top: 5%;
+    text-align: center;
+  }
+  .copyright {
+    background-color: var(--principal);
+    padding: 20px 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }
 
 /* Slider  
 Make an element move gradually */
-#slider{
+#slider {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  z-index: -1;
+}
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: animate 20s linear infinite;
+}
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+@media (max-width: 768px) {
+  #slider {
     width: 100%;
-    height: 500px;
+    height: 297px;
     overflow: hidden;
     z-index: -1;
-}
-#slider figure{
+  }
+  #slider figure {
     position: relative;
     width: 500%;
     margin: 0;
     left: 0;
     animation: animate 20s linear infinite;
-}
-#slider figure img{
+  }
+  #slider figure img {
     width: 20%;
     float: left;
-}
-@media(max-width:768px) {
-    #slider{
-        width: 100%;
-        height: 297px;
-        overflow: hidden;
-        z-index: -1;
-    }
-    #slider figure{
-        position: relative;
-        width: 500%;
-        margin: 0;
-        left: 0;
-        animation: animate 20s linear infinite;
-    }
-    #slider figure img{
-        width: 20%;
-        float: left;
-    }
+  }
 }
