@@ -36,6 +36,21 @@ img {
   padding-left: 100px;
   margin-top: 50px;
 }
+.arriba {
+  display: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+  background: #ffbe00;
+  font-size: 1.2em;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.arriba i {
+  color: #ffffff;
+}
 
 /*------------------Barra de navegación--------------*/
 
@@ -101,6 +116,9 @@ img {
   .fas {
     color: #ffffff;
     font-size: 1.1em;
+  }
+  .logo {
+    display: none;
   }
 }
 
