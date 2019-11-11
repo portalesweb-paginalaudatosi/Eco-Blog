@@ -8,6 +8,7 @@
   --letra: #127e6e;
   --gris: #808080;
 }
+
 .header {
   margin-bottom: 0px;
 }
@@ -216,6 +217,7 @@ header p {
 }
 .contenedor-informacion {
   align-items: center;
+  margin-top: 10px;
 }
 .contenedor-informacion img {
   height: 300px;
