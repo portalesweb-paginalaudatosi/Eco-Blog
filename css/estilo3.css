@@ -106,7 +106,7 @@ header p {
     display: block;
   }
   .header p {
-    display: inline-block;
+    display: none;
     padding-right: 280px;
     float: right;
     color: #ffffff;
@@ -133,9 +133,6 @@ header p {
   .fas {
     color: #ffffff;
     font-size: 1.1em;
-  }
-  .logo {
-    display: none;
   }
 }
 
