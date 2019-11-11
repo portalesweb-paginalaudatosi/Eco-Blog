@@ -106,7 +106,7 @@ header p {
     display: block;
   }
   .header p {
-    display: none;
+    display: inline-block;
     padding-right: 280px;
     float: right;
     color: #ffffff;
