@@ -32,10 +32,13 @@ img {
 }
 
 .logo {
-  height: 300px;
-  padding-left: 100px;
-  margin-top: 50px;
+  height: 250px;
+  width: 250px;
 }
+.logo img {
+  margin-top: 210px;
+}
+
 .arriba {
   display: none;
   padding-left: 5px;
