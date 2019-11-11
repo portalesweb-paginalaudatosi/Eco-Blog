@@ -37,7 +37,9 @@ img {
 }
 
 /*------------------Barra de navegación--------------*/
-
+header p {
+  display: none;
+}
 .header {
   background-color: var(--principal);
 }
@@ -102,6 +104,13 @@ img {
 @media (max-width: 768px) {
   .header label {
     display: block;
+  }
+  .header p {
+    display: inline-block;
+    padding-right: 280px;
+    float: right;
+    color: #ffffff;
+    font-family: "Francois One", sans-serif;
   }
   .menu {
     position: absolute;
