@@ -341,7 +341,7 @@ img {
 }
 .boton {
     /*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1*/
-    padding: 3px;
+    padding: 8px;
     border-radius: 0.3rem;
     display: inline-block;
     color: #ffffff;
@@ -366,27 +366,58 @@ img {
     transition: 0.5s;
   }
   
-  .boton span:after {
+.boton span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
-  }
+}
   
-  .boton:hover span {
+.boton:hover span {
     padding-right: 25px;
-  }
+}
   
-  .boton:hover span:after {
+.boton:hover span:after {
     opacity: 1;
     right: 0;
-  }
-  .boton span a {
+}
+.boton span a {
     text-decoration: none;
-  }
+}
 
+.button-wiggle {
+    animation: wiggle 4s 2s infinite;
+  }
+  
+  @keyframes wiggle {
+      5%,
+      50% {
+          transform: scale(1);
+      }
+      10% {
+          transform: scale(0.9);
+      }
+      15% {
+          transform: scale(1.15);
+      }
+      20% {
+          transform: scale(1.15) rotate(-5deg);
+      }
+    25% {
+        transform: scale(1.15) rotate(5deg);
+    }
+    30% {
+        transform: scale(1.15) rotate(-3deg);
+    }
+    35% {
+        transform: scale(1.15) rotate(2deg);
+    }
+    40% {
+        transform: scale(1.15) rotate(0);
+    }
+}
 /*Footer*/
 .contenedor3 { 
     
