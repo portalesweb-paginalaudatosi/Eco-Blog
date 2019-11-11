@@ -175,6 +175,9 @@ header p {
 .contenido-hero:hover {
   color: var(--secundario);
 }
+body {
+  /* background: var(--principal); */
+}
 
 /*----------------------------- Diagonal -----------------------------*/
 .diagonal {
@@ -326,7 +329,7 @@ header p {
   border-radius: 0.3rem;
   display: inline-block;
   color: #ffffff;
-  background-color: var(--oscuro);
+  background-color: var(--secundario);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8rem;
