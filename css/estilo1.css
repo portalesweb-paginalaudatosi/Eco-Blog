@@ -48,7 +48,7 @@ img {
     display: none;
     width: 50px;
     height: 50px;
-    padding: 10px;
+    padding-left: .6rem;
     border-right: 1px solid #ffffff;
 }
 .header label:hover {
@@ -61,6 +61,7 @@ img {
     padding: 0;
     display: flex;
     justify-content: flex-end;
+    
 }
 .menu li a {
     font-family: 'Francois One', sans-serif;
@@ -70,11 +71,13 @@ img {
     text-decoration: none;
 }
 .menu li a:hover {
+    background: rgba(0, 0, 0, 0.3);
     color: var(--secundario);
 }
 /*En este caso se manejó el media query para el maximo en pantallas pequeñas*/
 @media (max-width:768px) {
     .header label {
+        margin-top: none;
         display: block;
     }
     .menu {
@@ -82,7 +85,6 @@ img {
         background: (var(--principal));
         width:100%;
         margin-left: -70%;
-      
         transition: all 0.5s;
         z-index: 1;
     }
@@ -94,6 +96,21 @@ img {
     }
     #btn-menu:checked ~ .menu {
         margin: 0;
+    }
+    .header p {
+        display: inline-block;
+        padding-bottom: 30px;
+        padding-right: 280px;
+        color: #ffffff;
+        font-family: "Francois One", sans-serif;
+    }
+
+    .fas {
+        color: #ffffff;
+        font-size: 1.1em;
+    }
+    #btnMenu{
+        margin-top: -3rem;
     }
 }
 
