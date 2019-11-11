@@ -69,7 +69,7 @@ img {
     text-decoration: none;
 }
 .menu li a:hover {
-    background: rgba(152, 201, 135, 0.5);
+    color: var(--secundario);
 }
 /*En este caso se manejó el media query para el maximo en pantallas pequeñas*/
 @media (max-width:768px) {
@@ -172,7 +172,7 @@ img {
 }
 .contenedor-informacion img {
     height: 300px;
-    border: solid 10px;
+    border: none;
 }
 @media (min-width: 768px) {
     .contenedor-informacion {
