@@ -220,6 +220,19 @@ img {
         margin: 0;
     }
 }
+#about{ 
+    background-image: url(../img/acercaNosotros.jpg);
+    padding-bottom: 150px;
+    padding-top: 200px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.about_1 h1{ 
+    color: #ffffff;
+    font-size: 113px;
+    line-height: 1.2; 
+}
 /*Footer*/
 
 @media (min-width:768px) {
@@ -378,6 +391,7 @@ img {
 .copyright {
     background-color: var(--principal);
     font-size: 1rem;
+    text-align: center;
     color: var(--oscuro);
 }
 
@@ -392,6 +406,8 @@ img {
         background-color: var(--principal);
         padding: 20px 0;
         margin-bottom: 0;
+        text-align: center;
+        color: #ffffff;
         margin-top: 0;
         }
 }
