@@ -23,6 +23,10 @@ html {
     display: block;
 }
 body {
+    background: #ffffff;
+    
+
+
     font-size: 2rem;
     line-height: 2;
     font-family: 'Roboto Slab', serif;
@@ -34,7 +38,8 @@ img {
 /*------------------Barra de navegación--------------*/
 
 .header {
-    background-color: var(--principal);
+    background: var(--principal);
+
 }
 #btn-menu {
     display: none;
@@ -65,7 +70,7 @@ img {
     text-decoration: none;
 }
 .menu li a:hover {
-    background: rgba(152, 201, 135, 0.5);
+    color: var(--secundario);
 }
 /*En este caso se manejó el media query para el maximo en pantallas pequeñas*/
 @media (max-width:768px) {
@@ -135,7 +140,7 @@ img {
     padding: 2px;
     color: #ffffff;
     margin-top: -30px;
-    margin-bottom: 200px;
+    margin-bottom: 20%;
     
 }
 .diagonal:after {
@@ -158,7 +163,7 @@ img {
     font-family: 'Lora', serif;
     text-align: right;
     padding: .8%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ffffff;
 }
 #citaPapa b {
@@ -174,19 +179,22 @@ img {
 .informacionGeneral {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 3.2rem;
-    background-color: var(--secundario3);
+    padding: 2.2rem;
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: var(--oscuro);
-    border: solid 5px var(--secundario2);
+    border: solid 5px var(--principal);
     text-align: justify;
 }
 .informacionGeneral {
     box-shadow: 5px 5px 10px grey;
+    margin-bottom: 3rem;
   }
 .contenedorInformacion img {
-    float:left;
-    margin:10px;
-    margin-bottom: 10%;
+    max-width: 100%;
+    float: bottom;
+    margin-bottom: 01%;
 }
 .contenedorInformacion h1 {
     text-align: center;
@@ -195,13 +203,24 @@ img {
 
 .contenedor {
     max-width: 1200px;
-    width: 80%;
+    width: 90%;
     margin:0 auto;
 }
 .TemasPlaneta {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
+}
+@media (max-width: 768px)  {
+    .contenedor {
+        width: 80%;
+        margin: 10%;
+    }
+    .TemasPlaneta {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: .5rem;
+    }
 }
 .contenedorInformacion h1 {
     font-size: 1.3rem;
@@ -220,6 +239,7 @@ img {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media (min-width: 768px) {
     .contenedorInformacion img {
         width: 250px; 
@@ -234,10 +254,18 @@ img {
     text-align: center;
     padding: 5%;
     color: var(--oscuro);
-    width: 90%;
+    width: 100%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 25px;
+    
+}
+.tema:hover {
+    width: 300px;
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .titulo{
     font-size: 1rem;
@@ -249,13 +277,16 @@ img {
         text-align: center;
         padding: 5%;
         color: var(--oscuro);
-        width: 80%;
+        width: 90%;
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin-bottom: 25px;
     }
     .tema:hover {
         width: 300px;
+        background: #74ebd5;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
     
 }
@@ -410,12 +441,12 @@ img {
     padding-bottom: 10px;
 }
 .redes a i:hover{
-    color:#ffffff;
+    color: var(--secundario);
 }
 .copyright {
     background-color: var(--principal);
     font-size: 1rem;
-    color: var(--oscuro);
+    color: var(--secundario);
 }
 
 @media (min-width:768px)  {
@@ -435,39 +466,83 @@ img {
 
 /* Slider  
 Make an element move gradually */
-#slider{
+.slider{
     width: 100%;
-    height: 500px;
+    height: 700px;
     overflow: hidden;
     z-index: -1;
 }
-#slider figure{
+.slider figure{
     position: relative;
     width: 500%;
     margin: 0;
     left: 0;
-    animation: animate 20s linear infinite;
+    animation: animate 15s linear infinite;
 }
-#slider figure img{
+.slider figure img{
     width: 20%;
     float: left;
 }
+
+@keyframes animate{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
 @media(max-width:768px) {
-    #slider{
+    .slider{
         width: 100%;
-        height: 297px;
+        height: 260px;
         overflow: hidden;
         z-index: -1;
     }
-    #slider figure{
+    .slider figure{
         position: relative;
         width: 500%;
         margin: 0;
         left: 0;
-        animation: animate 20s linear infinite;
+        animation: animate 15s linear infinite;
     }
-    #slider figure img{
+    .slider figure img{
         width: 20%;
         float: left;
+    }
+}
+
+#casaComun img{
+    display: block;
+    margin: auto;
+    max-width: 50%;
+}
+
+@media(max-width:768px){
+    #casaComun img{
+        display: block;
+        margin: auto;
+        max-width: 100%;
     }
 }
